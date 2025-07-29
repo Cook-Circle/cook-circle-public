@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cook's Circle - Your Smart Food Management Solution</title>
     <link rel="icon" type="image/x-icon" href="static/img/cook-circle.ico">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Caveat:wght@400;500;600;700&display=swap');
@@ -451,63 +461,54 @@
                 <div class="lg:w-1/2 flex justify-center">
                     <div class="relative">
                         <!-- Phone Frame -->
-                        <div class="relative w-80 h-[640px] bg-gray-900 rounded-[3rem] p-3 shadow-2xl">
+                        <div class="relative w-72 h-[572px] bg-gray-900 rounded-[2.7rem] shadow-2xl" style="padding: 10.8px 10.8px 6.3px 10.8px;">
                             <!-- Phone Screen -->
-                            <div class="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
-                                <!-- Status Bar -->
-                                <div class="flex justify-between items-center px-6 py-3 bg-white">
-                                    <span class="text-sm font-semibold">9:41</span>
-                                    <div class="flex space-x-1">
-                                        <div class="w-4 h-2 bg-gray-300 rounded-full"></div>
-                                        <div class="w-4 h-2 bg-gray-300 rounded-full"></div>
-                                        <div class="w-4 h-2 bg-green-500 rounded-full"></div>
-                                    </div>
-                                </div>
+                            <div class="w-full h-full bg-white rounded-[2.25rem] overflow-hidden relative">
                                 
                                 <!-- Swipeable Content Container -->
-                                <div id="screenContainer" class="relative h-full overflow-hidden">
+                                <div id="screenContainer" class="relative overflow-hidden pt-[13.5px]" style="height: calc(100% - 13.5px);">
                                     <!-- Screen 1: Dashboard -->
                                     <div class="screen absolute inset-0 transition-transform duration-300 ease-in-out" data-screen="0">
                                         <img 
-                                            src="https://via.placeholder.com/350x550/10b981/ffffff?text=Dashboard+Screenshot" 
+                                            src="static/img/carousel_img/dashboard.png" 
                                             alt="Cook's Circle Dashboard Screenshot" 
-                                            class="w-full h-full object-cover rounded-t-[2rem]"
+                                            class="w-full h-full object-fill rounded-t-[1.8rem]"
                                         >
                                     </div>
                                     
                                     <!-- Screen 2: Inventory -->
                                     <div class="screen absolute inset-0 transition-transform duration-300 ease-in-out translate-x-full" data-screen="1">
                                         <img 
-                                            src="https://via.placeholder.com/350x550/3b82f6/ffffff?text=Inventory+Screenshot" 
+                                            src="static/img/carousel_img/inventory.png" 
                                             alt="Cook's Circle Inventory Screenshot" 
-                                            class="w-full h-full object-cover rounded-t-[2rem]"
+                                            class="w-full h-full object-fill rounded-t-[1.8rem]"
                                         >
                                     </div>
                                     
-                                    <!-- Screen 3: Recipe Details -->
+                                    <!-- Screen 3: Recipes -->
                                     <div class="screen absolute inset-0 transition-transform duration-300 ease-in-out translate-x-full" data-screen="2">
                                         <img 
-                                            src="https://via.placeholder.com/350x550/8b5cf6/ffffff?text=Recipe+Screenshot" 
-                                            alt="Cook's Circle Recipe Screenshot" 
-                                            class="w-full h-full object-cover rounded-t-[2rem]"
+                                            src="static/img/carousel_img/recipe.png" 
+                                            alt="Cook's Circle Recipes Screenshot" 
+                                            class="w-full h-full object-fill rounded-t-[1.8rem]"
                                         >
                                     </div>
                                     
-                                    <!-- Screen 4: Shopping List -->
+                                    <!-- Screen 4: Shopping -->
                                     <div class="screen absolute inset-0 transition-transform duration-300 ease-in-out translate-x-full" data-screen="3">
                                         <img 
-                                            src="https://via.placeholder.com/350x550/f59e0b/ffffff?text=Shopping+Screenshot" 
-                                            alt="Cook's Circle Shopping List Screenshot" 
-                                            class="w-full h-full object-cover rounded-t-[2rem]"
+                                            src="static/img/carousel_img/shopping.png" 
+                                            alt="Cook's Circle Shopping Screenshot" 
+                                            class="w-full h-full object-fill rounded-t-[1.8rem]"
                                         >
                                     </div>
                                     
-                                    <!-- Screen 5: Analytics -->
+                                    <!-- Screen 5: Circle -->
                                     <div class="screen absolute inset-0 transition-transform duration-300 ease-in-out translate-x-full" data-screen="4">
                                         <img 
-                                            src="https://via.placeholder.com/350x550/10b981/ffffff?text=Analytics+Screenshot" 
-                                            alt="Cook's Circle Analytics Screenshot" 
-                                            class="w-full h-full object-cover rounded-t-[2rem]"
+                                            src="static/img/carousel_img/circle.png" 
+                                            alt="Cook's Circle Social Circle Screenshot" 
+                                            class="w-full h-full object-fill rounded-t-[1.8rem]"
                                         >
                                     </div>
                                 </div>
@@ -600,7 +601,7 @@
                             </div>
                         </div>
                         
-                        <!-- Recipe Description -->
+                        <!-- Recipes Description -->
                         <div class="feature-desc hidden" data-screen="2">
                             <div class="flex items-center space-x-3 mb-4">
                                 <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
@@ -608,29 +609,29 @@
                                 </div>
                                 <div>
                                     <h3 class="text-2xl font-bold text-gray-900">Smart Recipes</h3>
-                                    <p class="text-gray-600">Perfectly matched to your ingredients</p>
+                                    <p class="text-gray-600">From recommendations and circle</p>
                                 </div>
                             </div>
                             <div class="space-y-4 text-gray-700">
-                                <p>Our AI chef creates personalized recipes based on what you have, what's expiring, and your taste preferences. Turn potential food waste into delicious meals!</p>
+                                <p>Discover amazing recipes from our AI recommendations and your friend circle. Get personalized suggestions based on your inventory and see what your friends are cooking!</p>
                                 <ul class="space-y-2">
                                     <li class="flex items-center space-x-2">
                                         <span class="text-green-500">✓</span>
-                                        <span>Ingredient-based recipe matching</span>
+                                        <span>AI-powered recipe recommendations</span>
                                     </li>
                                     <li class="flex items-center space-x-2">
                                         <span class="text-green-500">✓</span>
-                                        <span>Step-by-step cooking guidance</span>
+                                        <span>Recipes shared from your circle</span>
                                     </li>
                                     <li class="flex items-center space-x-2">
                                         <span class="text-green-500">✓</span>
-                                        <span>Waste-reducing recipe suggestions</span>
+                                        <span>Based on your current inventory</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         
-                        <!-- Shopping List Description -->
+                        <!-- Shopping Description -->
                         <div class="feature-desc hidden" data-screen="3">
                             <div class="flex items-center space-x-3 mb-4">
                                 <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center">
@@ -638,53 +639,53 @@
                                 </div>
                                 <div>
                                     <h3 class="text-2xl font-bold text-gray-900">Smart Shopping</h3>
-                                    <p class="text-gray-600">Never buy what you already have</p>
+                                    <p class="text-gray-600">Items automatically added from recipes</p>
                                 </div>
                             </div>
                             <div class="space-y-4 text-gray-700">
-                                <p>Our intelligent shopping lists know what you have, what you need, and what's on sale. Shop smarter, not harder, with contextual suggestions and automatic organization.</p>
+                                <p>Your shopping list gets smarter! When you select recipes, we automatically add the missing ingredients to your shopping list, checking your inventory first to avoid duplicates.</p>
                                 <ul class="space-y-2">
                                     <li class="flex items-center space-x-2">
                                         <span class="text-green-500">✓</span>
-                                        <span>Auto-generated based on recipes</span>
+                                        <span>Auto-populated from selected recipes</span>
                                     </li>
                                     <li class="flex items-center space-x-2">
                                         <span class="text-green-500">✓</span>
-                                        <span>Price estimates and coupon alerts</span>
+                                        <span>Checks inventory to avoid duplicates</span>
                                     </li>
                                     <li class="flex items-center space-x-2">
                                         <span class="text-green-500">✓</span>
-                                        <span>Store layout optimization</span>
+                                        <span>Organized by store sections</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         
-                        <!-- Analytics Description -->
+                        <!-- Circle Description -->
                         <div class="feature-desc hidden" data-screen="4">
                             <div class="flex items-center space-x-3 mb-4">
-                                <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
-                                    <span class="text-2xl">📊</span>
+                                <div class="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center">
+                                    <span class="text-2xl">👥</span>
                                 </div>
                                 <div>
-                                    <h3 class="text-2xl font-bold text-gray-900">Impact Analytics</h3>
-                                    <p class="text-gray-600">See your positive impact grow</p>
+                                    <h3 class="text-2xl font-bold text-gray-900">Cook's Circle</h3>
+                                    <p class="text-gray-600">Connect with friends and show off badges</p>
                                 </div>
                             </div>
                             <div class="space-y-4 text-gray-700">
-                                <p>Track your food waste reduction, money saved, and environmental impact. Celebrate your achievements and stay motivated with gamified progress tracking.</p>
+                                <p>Connect with your friends, get updates on their cooking adventures, share your favorite recipes, and show off your achievement badges. Make cooking social and fun!</p>
                                 <ul class="space-y-2">
                                     <li class="flex items-center space-x-2">
                                         <span class="text-green-500">✓</span>
-                                        <span>Money saved from waste reduction</span>
+                                        <span>Connect and follow friends</span>
                                     </li>
                                     <li class="flex items-center space-x-2">
                                         <span class="text-green-500">✓</span>
-                                        <span>Environmental impact metrics</span>
+                                        <span>Share recipes and cooking updates</span>
                                     </li>
                                     <li class="flex items-center space-x-2">
                                         <span class="text-green-500">✓</span>
-                                        <span>Achievement badges and streaks</span>
+                                        <span>Earn and showcase achievement badges</span>
                                     </li>
                                 </ul>
                             </div>
